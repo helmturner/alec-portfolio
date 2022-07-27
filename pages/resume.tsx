@@ -12,13 +12,7 @@ const Home: NextPage = () => {
   return (
     <Layout className={styles.layout}>
       <Nav className={styles.nav} />
-      <Contact className={styles.contact}>CONTACT CONTACT CONTACT</Contact>
-
-      <Bio className={styles.bio}>BIO BIO BIO</Bio>
-
-      <main className={styles.main}>MAIN MAIN MAIN</main>
-
-      <Footer className={styles.footer}>FOOTER FOOTER FOOTER</Footer>
+      <div>RESUME GOES HERE</div>
     </Layout>
   );
 };
