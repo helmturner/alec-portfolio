@@ -12,9 +12,55 @@ const Home: NextPage = () => {
   return (
     <Layout className={styles.layout}>
       <Nav className={styles.nav} />
-      <Contact className={styles.contact}>CONTACT CONTACT CONTACT</Contact>
-
-      <Bio className={styles.bio}>BIO BIO BIO</Bio>
+      <Contact
+        email="alec@alecvision.com"
+        fullName="Alec Helmturner"
+        jobTitle="Full-Stack Web Developer"
+        telephone="+1 9184042425"
+        className={styles.contact}
+        skills={{
+          general: [
+            "JavaScript",
+            "TypeScript",
+            "Next.js",
+            "git/Github",
+            "REST",
+            "GraphQL",
+          ],
+          frontend: [
+            "HTML",
+            "React",
+            "Querying APIs",
+            "Zod (runtime validation)",
+            "React-Query",
+            "Apollo (client)",
+          ],
+          backend: [
+            "Node.js",
+            "Docker",
+            "API Design",
+            "Schema Design",
+            "Query Resolution",
+            "Express",
+            "MongoDB",
+          ],
+        }}
+      />
+      <Bio className={styles.bio}>
+        <p>
+          I am a software engineer with a passion for building web applications.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+          euismod, nisi eu consectetur consectetur, nisl nisl consectetur nisl,
+          euismod euismod nisi nisl euismod.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+          euismod, nisi eu consectetur consectetur, nisl nisl consectetur nisl,
+          euismod euismod nisi nisl euismod.
+        </p>
+      </Bio>
 
       <main className={styles.main}>MAIN MAIN MAIN</main>
 

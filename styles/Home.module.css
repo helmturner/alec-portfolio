@@ -1,3 +1,9 @@
+.layout > * {
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+
 .layout {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -10,6 +16,8 @@
 
 .bio {
   grid-area: aside;
+  display: inline-block;
+  text-align: center;
 }
 
 .nav {
@@ -35,13 +43,13 @@
 
 @media screen and (max-width: 480px) {
   .layout {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: fit-content(100%);
     grid-template-areas: 
-        "nav nav"
-        "address aside"
-        "main main"
-        "footer footer"
+        "nav nav nav nav"
+        "address aside aside aside"
+        "main main main main"
+        "footer footer footer footer"
   }
 }
 

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { DetailedHTMLProps, HTMLAttributes } from "react";
+import {gitHubUrl, linkedInUrl} from '../constants'
 
 interface Props
   extends DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> {
@@ -11,8 +12,8 @@ const Nav = ({ ...restProps }: Props) => {
       <Link href="/">
           <a>Home</a>
         </Link>
-        <a href="https://github.com/alecvision">Github</a>
-        <a href="https://linkedin.com/in/alechelmturner">LinkedIn</a>
+        <a href={gitHubUrl}>Github</a>
+        <a href={linkedInUrl}>LinkedIn</a>
         <Link href="/resume">
           <a>Resume</a>
         </Link>
