@@ -1,0 +1,19 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: fit-content(100%);
+    grid-template-areas: 
+        "nav"
+        "main"
+        "footer";
+}
+
+.nav {
+    grid-area: nav;
+}
+.main {
+    grid-area: main;
+}
+.footer {
+    grid-area: footer;
+}

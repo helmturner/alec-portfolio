@@ -1,4 +1,4 @@
-body > div * {
+#__next * {
   border-style: solid;
   border-width: 1px;
   border-color: rgb(255, 0, 0);
@@ -6,15 +6,20 @@ body > div * {
 
 html,
 body {
+  text-align: center;
   padding: 0;
   margin: 0;
+  background: rgb(205, 174, 255);
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+small {
+  font-size: 0.8rem;
+}
+
 a {
   color: inherit;
-  text-decoration: none;
 }
 
 * {
@@ -27,6 +32,6 @@ a {
   }
   body {
     color: white;
-    background: black;
+    background: rgb(42, 1, 40);
   }
 }

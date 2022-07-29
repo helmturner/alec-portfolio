@@ -1,23 +1,33 @@
-import type { NextPage } from "next";
-import Head from "next/head";
-import Link from "next/link";
+import type { GetStaticProps, NextPage } from "next";
 import styles from "../styles/Home.module.css";
-import Layout from "../components/Layout";
+import HomeLayout from "../components/Layouts/HomeLayout";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import Bio from "../components/Bio";
 import Contact from "../components/Contact";
+import { Project } from "../constants";
+import ProjectCard from "../components/ProjectCard";
+import Link from "next/link";
+import { NextPageWithLayout } from "./_app";
 
-const Home: NextPage = () => {
+type PageProps = { projects: Project[] };
+
+export const getStaticProps: GetStaticProps<PageProps> = async ({}) => {
+  const { projects, featuredProjects } = await import("../constants");
+  return {
+    props: { projects: featuredProjects.map((name) => projects[name]) },
+  };
+};
+
+const Home: NextPageWithLayout<PageProps> = ({ projects }) => {
   return (
-    <Layout className={styles.layout}>
-      <Nav className={styles.nav} />
+    <>
       <Contact
         email="alec@alecvision.com"
         fullName="Alec Helmturner"
         jobTitle="Full-Stack Web Developer"
         telephone="+1 9184042425"
-        className={styles.contact}
+        className={styles.left}
         skills={{
           general: [
             "JavaScript",
@@ -46,7 +56,19 @@ const Home: NextPage = () => {
           ],
         }}
       />
-      <Bio className={styles.bio}>
+      
+      <section className={styles.main}>
+        <h2>Featured Projects</h2>
+        {projects.map((project, index) => (
+          <Link key={index} href={`projects/${project.slug}`}>
+            <a>
+              <ProjectCard isOpen={false} project={project} />
+            </a>
+          </Link>
+        ))}
+      </section>
+
+      <Bio className={styles.right}>
         <p>
           I am a software engineer with a passion for building web applications.
         </p>
@@ -61,12 +83,14 @@ const Home: NextPage = () => {
           euismod euismod nisi nisl euismod.
         </p>
       </Bio>
-
-      <main className={styles.main}>MAIN MAIN MAIN</main>
-
-      <Footer className={styles.footer}>FOOTER FOOTER FOOTER</Footer>
-    </Layout>
+    </>
   );
 };
+
+Home.getLayout = (page) => (
+  <HomeLayout>
+    {page}
+  </HomeLayout>
+);
 
 export default Home;

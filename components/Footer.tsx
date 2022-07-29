@@ -1,13 +1,11 @@
 import { DetailedHTMLProps, HTMLAttributes } from "react";
 import {firstName, lastName} from '../constants'
 
-interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> {
-    children: React.ReactNode;
-}
+type Props = DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>;
 
-const Footer = ({children, ...restProps}: Props) => {
+const Footer = ({className, ...restProps}: Props) => {
     return (
-        <footer {...restProps}>
+        <footer className={className ?? 'footer'} {...restProps}>
             <small>© {`${new Date().getFullYear()} ${firstName} ${lastName}`} </small>
         </footer>
     );
