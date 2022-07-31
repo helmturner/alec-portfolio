@@ -1,0 +1,116 @@
+@value colors: "../../styles/vars.css";
+@value purple1, purple2, purple3, green1, green2 from colors;
+
+.container {
+  color: purple1;
+  display: flex;
+  padding: 5px;
+  flex-direction: column;
+  align-items: center;
+  background-color: purple3;
+  border: 3px solid purple2;
+  border-radius: 30px;
+  cursor: default;
+}
+.container > * {
+    cursor: pointer;
+}
+
+.container hr {
+    width: 75%;
+    height: 5px;
+    margin-block: 5px;
+    border-color: purple1;
+    background-color: purple2;
+    border-radius: 10px;
+}
+
+.container h1 {
+    font-family: monospace;
+    color: green1;
+    font-size: max(3.5vw, 4vh);
+    font-weight: 800;
+    margin: max(.5vw, 2px);
+    padding: 0;
+    text-shadow: 2px 1px 1px green2, -2px -1px 1px green2;
+}
+
+.container h2 {
+    color: purple1;
+    font-weight: 800;
+    font-size: max(2.3vw, 2.3vh);
+    padding-inline: 10%;
+    margin-inline: 5%;
+    margin-block: 5px;
+    border: 5px solid purple1;
+    background-color: purple2;
+    border-radius: 5px;
+    text-shadow: 1px 1px 1px purple3, -1px -1px 1px purple3;
+}
+
+.container h3 {
+    color: green2;
+    font-weight: 800;
+    font-size: max(2vw, 2vh);
+    padding-inline: 10%;
+    margin-inline: 5%;
+    margin-block: 5px;
+    border: 5px solid purple1;
+    background-color: purple1;
+    border-radius: 5px;
+}
+
+.contactInfo {
+    font-weight: 400;
+    margin: max(.5vw, 2px);
+    padding: 0;
+}
+
+.contactInfo > h4 {
+    color: green1;
+    font-size: max(2vw, 2vh);
+    font-weight: 300;
+    text-shadow: 1px 1px 1px black, -1px -1px 1px black;
+    margin: 5px;
+    padding: 0;
+}
+
+.list hr {
+    width: 50%;
+    height: 5px;
+    border-color: purple3;
+    background-color: purple3;
+    border-radius: 10px;
+}
+
+.list {
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+    align-content: space-around;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    margin-block: 2px;
+    border-radius: 20px;
+    background-color: purple2;
+    border: 5px solid purple1;
+    color: silver   ;
+    text-shadow: 1px 1px 1px purple3, -1px -1px 1px purple3;
+}
+
+.list h4 {
+    align-self: center;
+    font-size: max(1.75vw, 1.75vh);
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+.list li {
+    font-size: max(1.5vw, 1.5vh);
+    margin: max(.5vw, 2px);
+    padding: 0;
+}

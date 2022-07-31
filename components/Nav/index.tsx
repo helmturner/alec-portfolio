@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { DetailedHTMLProps, HTMLAttributes } from "react";
-import { gitHubUrl, linkedInUrl } from "../constants";
-import Button from "./Button";
-import styles from "./styles/Nav.module.css";
+import { gitHubUrl, linkedInUrl } from "../../constants";
+import Button from "../Button";
+import styles from "./style.module.css";
 
 type Props = DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>;
 

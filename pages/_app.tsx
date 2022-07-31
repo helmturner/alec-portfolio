@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout || (page => page)
   return (
   <AppLayout>
-    getLayout(<Component {...pageProps} />)
+    {getLayout(<Component {...pageProps} />)}
   </AppLayout>)
 }
 

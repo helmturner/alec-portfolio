@@ -5,7 +5,6 @@
   grid-template-areas: "left center center right";
 }
 
-
 @media screen and (max-width: 480px) {
   .wrapper {
     grid-template-columns: 1fr 1fr 1fr 1fr;

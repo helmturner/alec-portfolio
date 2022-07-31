@@ -1,11 +1,12 @@
 import type { GetServerSideProps, GetStaticPaths, NextPage } from "next";
-import styles from "../../styles/Project.module.css";
+import styles from "../../styles/Project-page.module.css";
 import { ParsedUrlQuery } from "querystring";
-import Layout from "../../components/Layouts/HomeLayout";
+import Layout from "../../components/Layouts/PageLayout";
 import Nav from "../../components/Nav";
 import Footer from "../../components/Footer";
 import type { Project } from "../../constants";
 import ProjectCard from "../../components/ProjectCard";
+import { NextPageWithLayout } from "../_app";
 
 type QueryParams = ParsedUrlQuery & {
   project: string;
@@ -28,14 +29,12 @@ export const getStaticProps: GetServerSideProps<
   return { props: projects[project] };
 };
 
-const ProjectPage: NextPage<Project> = (project) => {
+const ProjectPage: NextPageWithLayout<Project> = (project) => {
   return (
-    <Layout className={styles.layout}>
-      <Nav />
       <ProjectCard isOpen={true} project={project}/>
-      <Footer />
-    </Layout>
   );
 };
+
+ProjectPage.getLayout = (page) => <Layout>{page}</Layout>;
 
 export default ProjectPage;

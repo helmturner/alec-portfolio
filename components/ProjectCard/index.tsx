@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { DetailedHTMLProps, HTMLAttributes } from "react";
-import type { Project } from "../constants";
+import type { Project } from "../../constants";
+import styles from "./style.module.css";
 
 type Props = DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & {
   project: Project;
@@ -32,13 +33,13 @@ const ProjectCard = ({ isOpen, project, ...restProps }: Props) => {
   );
 
   return (
-    <article {...restProps}>
-      <h1>{title}</h1>
-      <h2>{subtitle}</h2>
+    <article className={styles.container} {...restProps}>
+      <h3>{title}</h3>
+      <h4>{subtitle}</h4>
       {isOpen && <Full />}
       <small>
         Built with:{" "}
-        <ul>
+        <ul className={styles.list}>
           {tech.map((item, index) => (
             <li key={index}>{item.toUpperCase()}</li>
           ))}

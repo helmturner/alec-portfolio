@@ -1,5 +1,5 @@
 import { DetailedHTMLProps, HTMLAttributes } from "react";
-import {firstName, lastName} from '../constants'
+import {firstName, lastName} from '../../constants'
 
 type Props = DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>;
 

@@ -6,6 +6,13 @@
         "nav"
         "main"
         "footer";
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.wrapper > * {
+    margin: .5vw;
+    padding: 0;
 }
 
 .nav {
