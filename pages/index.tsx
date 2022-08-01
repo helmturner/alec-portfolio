@@ -1,7 +1,6 @@
-import type { GetStaticProps } from "next";
-import HomeLayout from "../components/Layouts/HomeLayout";
-import Bio from "../components/Bio";
-import Contact from "../components/Contact";
+import type { GetStaticProps, NextPage } from "next";
+import mustacheImage from "../public/images/Mustache-Silhouette-2.svg";
+import comingSoonImage from "../public/images/coming-soon.jpeg";
 import {
   bioParagraphs,
   email,
@@ -9,12 +8,13 @@ import {
   lastName,
   phone,
   Project,
-  skills,
   title,
 } from "../constants";
-import ProjectCard from "../components/ProjectCard";
+import styles from "../styles/pages/index.module.css";
 import Link from "next/link";
-import type { NextPageWithLayout } from "./_app";
+import Image from "next/future/image";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 type PageProps = { projects: Project[] };
 
@@ -25,40 +25,66 @@ export const getStaticProps: GetStaticProps<PageProps> = async ({}) => {
   };
 };
 
-const Home: NextPageWithLayout<PageProps> = ({ projects }) => {
+const Home: NextPage<PageProps> = ({ projects }) => {
   return (
     <>
+      <section className={styles.bizcard}>
+        <address>
+          <h2>
+            {firstName} {lastName}
+          </h2>
+          <h3>{title}</h3>
+            <a href={`mailto:${email}`}>{email}</a>
+            <br />
+            <a href={`tel:${phone}`}>{phone}</a>
+        </address>
 
-      <Contact
-        email={email}
-        fullName={`${firstName} ${lastName}`}
-        jobTitle={`${title}`}
-        telephone={phone}
-        skills={skills}
-        style={{ gridArea: "left" }}
-      />
-
-      <section style={{ gridArea: "center" }}>
-        <h2>Featured Projects</h2>
-        {projects.map((project, index) => (
-          <Link key={index} href={`projects/${project.slug}`}>
-            <a style={{textDecoration: 'none'}}>
-              <ProjectCard isOpen={false} project={project} />
-            </a>
-          </Link>
-        ))}
+        <ul>
+          <li>REACT</li>
+          <li>AZURE</li>
+          <li>AWS</li>
+          <li>GCP</li>
+          <li>DOCKER</li>
+          <li>NODE</li>
+          <li>JS</li>
+          <li>CSS</li>
+          <li>HTML</li>
+          <li>GIT</li>
+          <li>TS</li>
+        </ul>
       </section>
 
-      <Bio style={{ gridArea: "right" }}>
+      <main>
+        <h2>Featured Projects</h2>
+        {projects.map((project, index) => (
+          <section key={index}>
+            <Image src={comingSoonImage} alt={project.title} />
+            <Link href={`projects/${project.slug}`}>
+              <h3>{project.title}</h3>
+            </Link>
+            <h4>
+              <small>{project.subtitle}</small>
+            </h4>
+            <small>
+              Built with:{" "}
+              <ul>
+                {project.tech.map((item, index) => (
+                  <li key={index}>{item.toUpperCase()}</li>
+                ))}
+              </ul>
+            </small>
+          </section>
+        ))}
+      </main>
+
+      <aside>
+        <h2>Bio</h2>
         {bioParagraphs.map((paragraph) => (
           <p key={paragraph}>{paragraph}</p>
         ))}
-      </Bio>
-      
+      </aside>
     </>
   );
 };
-
-Home.getLayout = (page) => <HomeLayout>{page}</HomeLayout>;
 
 export default Home;
