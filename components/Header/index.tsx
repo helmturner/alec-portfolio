@@ -7,7 +7,7 @@ import styles from "./style.module.css";
 
 type Props = DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>;
 
-const Header = ({ className, ...restProps }: Props) => {
+const Header = (_props: Props) => {
   return (
     <header className={styles.header}>
     <div className={`${styles.image} ${styles.stacked}`}>

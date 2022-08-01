@@ -1,5 +1,4 @@
 import type { GetStaticProps, NextPage } from "next";
-import mustacheImage from "../public/images/Mustache-Silhouette-2.svg";
 import comingSoonImage from "../public/images/coming-soon.jpeg";
 import {
   bioParagraphs,
@@ -9,12 +8,12 @@ import {
   phone,
   Project,
   title,
+  skills,
 } from "../constants";
 import styles from "../styles/pages/index.module.css";
 import Link from "next/link";
 import Image from "next/future/image";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Contact from "../components/Contact";
 
 type PageProps = { projects: Project[] };
 
@@ -28,32 +27,14 @@ export const getStaticProps: GetStaticProps<PageProps> = async ({}) => {
 const Home: NextPage<PageProps> = ({ projects }) => {
   return (
     <>
-      <section className={styles.bizcard}>
-        <address>
-          <h2>
-            {firstName} {lastName}
-          </h2>
-          <h3>{title}</h3>
-            <a href={`mailto:${email}`}>{email}</a>
-            <br />
-            <a href={`tel:${phone}`}>{phone}</a>
-        </address>
-
-        <ul>
-          <li>REACT</li>
-          <li>AZURE</li>
-          <li>AWS</li>
-          <li>GCP</li>
-          <li>DOCKER</li>
-          <li>NODE</li>
-          <li>JS</li>
-          <li>CSS</li>
-          <li>HTML</li>
-          <li>GIT</li>
-          <li>TS</li>
-        </ul>
-      </section>
-
+      <Contact
+        email={email}
+        fullName={`${firstName} ${lastName}`}
+        jobTitle={title}
+        skills={skills}
+        telephone={phone}
+      />
+      
       <main>
         <h2>Featured Projects</h2>
         {projects.map((project, index) => (

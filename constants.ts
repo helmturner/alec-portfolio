@@ -20,33 +20,27 @@ export const bioParagraphs = [
     experiences on behalf of others that seek to do the same.
   `,
 ];
-export const skills = {
-  general: [
-    "JavaScript",
-    "TypeScript",
-    "Next.js",
-    "git/Github",
+export const skills = [
+    "HTML",
+    "JS",
+    "TS",
+    "CSS",
+    "React",
+    "NextJS",
+    "Github",
     "REST",
     "GraphQL",
-  ],
-  frontend: [
-    "HTML",
-    "React",
-    "Querying APIs",
-    "Zod (runtime validation)",
-    "React-Query",
-    "Apollo (client)",
-  ],
-  backend: [
-    "Node.js",
+    "Schemas",
+    "Resolvers",
+    "Apollo",
+    "Node",
     "Docker",
     "API Design",
-    "Schema Design",
-    "Query Resolution",
     "Express",
     "MongoDB",
-  ],
-};
+    "...and more!",
+  ]
+
 const githubBase = "https://github.com/alecvision";
 export const projects: { [key: string]: Project } = {
   portfolio: {

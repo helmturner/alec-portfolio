@@ -1,5 +1,6 @@
 .image {
-  max-width: 500px
+  max-width: 500px;
+  z-index: -1;
 }
 
 @media (prefers-color-scheme: dark) {
