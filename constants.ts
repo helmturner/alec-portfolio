@@ -51,13 +51,13 @@ export const projects: { [key: string]: Project } = {
     subtitle:
       "My Portfolio site, bulit in 2 days with NextJS, TypeScript, and React",
     description: `
-        Many mentors recommended that I build a website to show off my skills, so I did.
+        Many mentors recommended that I build a website to show off my skills, so I took the advice.
         
-        In two days. While livestreaming.
+        What started as a speedrun challenge ended up as a lesson: I needed to learn more about CSS.
         
-        My portfolio will probably be updated many times, but the original 2-day version will live on here, forever.
-
-        (I may update this page with a link to the edited video after publishing it.)
+        That's why this portfolio is built with minimal dependencies and 100% custom CSS.
+        
+        Maybe I'm still not the best designer, but given a good design, I now know how to implement it!
     `,
   },
   airtable: {
