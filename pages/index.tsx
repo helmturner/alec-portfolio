@@ -35,6 +35,13 @@ const Home: NextPage<PageProps> = ({ projects }) => {
         telephone={phone}
       />
       
+      <aside>
+        <h2>Bio</h2>
+        {bioParagraphs.map((paragraph) => (
+          <p key={paragraph}>{paragraph}</p>
+        ))}
+      </aside>
+
       <main>
         <h2>Featured Projects</h2>
         {projects.map((project, index) => (
@@ -57,13 +64,6 @@ const Home: NextPage<PageProps> = ({ projects }) => {
           </section>
         ))}
       </main>
-
-      <aside>
-        <h2>Bio</h2>
-        {bioParagraphs.map((paragraph) => (
-          <p key={paragraph}>{paragraph}</p>
-        ))}
-      </aside>
     </>
   );
 };
