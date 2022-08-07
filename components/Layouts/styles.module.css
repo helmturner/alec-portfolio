@@ -1,0 +1,125 @@
+@media (min-width: 100ch) {
+  .input.burger ~ label > nav.nav {
+    width: 15vw;
+    min-width: 14ch;
+    display: flex;
+  }
+  .input.burger ~ label > nav.nav > * {
+    display: block;
+  }
+  input.burger ~ header.header + label.burger {
+    display: none;
+  }
+}
+/*
+
+    HAMBURGER MENU
+    LICENSE: LICENSES/hamburger.txt
+
+*/
+input.burger {
+  display: none;
+}
+input.burger ~ .header > label.burger {
+  z-index: 9999;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  cursor: pointer;
+  transition: 0.5s ease;
+  height: 50px;
+}
+input.burger ~ .header > label.burger:hover > div.burgermark {
+  box-shadow: 1px 1px 7px 1px RGBa(0, 0, 0, 0.3);
+}
+input.burger ~ .header > label.burger > div.burgermark {
+  width: 55px;
+  height: 10px;
+  background: #fff;
+  box-shadow: 1px 1px 3px RGBa(0, 0, 0, 0.4);
+  border-radius: 2px;
+  transition: 0.4s ease;
+}
+input.burger ~ .header > label.burger > div.burgermark:not(:first-child) {
+  margin-top: 10px;
+}
+input.burger:checked ~ .header > label.burger {
+  transform: rotatey(180deg);
+  left: 8ch;
+}
+input.burger:checked ~ .header > label.burger > div.burgermark:first-child {
+  transform: rotate(-45deg);
+  margin-top: 20px;
+}
+input.burger:checked ~ .header > label.burger > div.burgermark:nth-child(2) {
+  opacity: 0;
+}
+input.burger:checked ~ .header > label.burger > div.burgermark:nth-child(3) {
+  margin-top: -30px;
+  transform: rotate(45deg);
+}
+/* 
+
+    NAVIGATION
+
+*/
+input.burger ~ label > nav {
+  background: white;
+  box-shadow: 2px 0 rgba(0, 0, 0, 0.376);
+  padding: 80px 5px 5px 5px;
+  align-items: center;
+  width: 8.5ch;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  transition: 0.5s ease;
+}
+input.burger ~ label > nav > * {
+  display: none;
+  padding-block: 1em;
+}
+input.burger:checked ~ label > nav > * {
+  display: block;
+}
+input.burger:checked ~ label > nav {
+  z-index: 9998;
+  width: 14ch;
+}
+.overlay {
+  z-index: 9997;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.103);
+  display: none;
+}
+input.burger:checked ~ .overlay {
+  display: block;
+  pointer-events: all;
+}
+/* 
+
+   .header
+
+*/
+.header {
+  text-align: center;
+  width: auto;
+  height: auto;
+}
+.header h1 {
+  padding: 0;
+  margin: .5em;
+}
+.header strong {
+  font-size: 2rem;
+}
+.header small {
+  text-transform: uppercase;
+  font-size: .8rem;
+}
