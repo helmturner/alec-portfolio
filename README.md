@@ -1,4 +1,4 @@
-This is my personal portfolio website, bootstrapped with NextJS and the Mantine components library.
+This is my personal portfolio website, bootstrapped with NextJS.
 
 ## Getting Started
 
