@@ -1,36 +1,6 @@
-@value purple1: #D0C4DF;
-@value purple2: #8B5FBF;
-@value purple3: #2F0A28;
-@value green1: #23F0C7;
-@value green2: #034748;
-
-/* @link https://utopia.fyi/type/calculator?c=272,16,1.067,2160,32,1.5,5,3,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
-@value text-3xs: clamp(0.59rem, calc(0.86rem + -0.20vw), 0.82rem);
-@calue text-2xs: clamp(0.88rem, calc(0.88rem + 0.01vw), 0.89rem);
-@value text-xs: clamp(0.94rem, calc(0.88rem + 0.34vw), 1.33rem);
-@value text-s: clamp(1.00rem, calc(0.86rem + 0.85vw), 2.00rem);
-@value text-m: clamp(1.07rem, calc(0.79rem + 1.64vw), 3.00rem);
-@value text-l: clamp(1.14rem, calc(0.65rem + 2.85vw), 4.50rem);
-@calue text-xl: clamp(1.22rem, calc(0.42rem + 4.69vw), 6.75rem);
-@value text-2xl: clamp(1.30rem, calc(0.02rem + 7.48vw), 10.13rem);
-@value text-3xl: clamp(1.38rem, calc(-0.61rem + 11.70vw), 15.19rem);
-
-/* @link https://utopia.fyi/space/calculator?c=272,16,1.067,2160,32,1.5,5,3,&s=0.75|0.5|0.25,1.5|2|3|4|6, */
-@value space-3xs: clamp(0.25rem, calc(0.21rem + 0.21vw), 0.50rem);
-@value space-2xs: clamp(0.50rem, calc(0.43rem + 0.42vw), 1.00rem);
-@value space-xs: clamp(0.75rem, calc(0.64rem + 0.64vw), 1.50rem);
-@value space-s: clamp(1.00rem, calc(0.86rem + 0.85vw), 2.00rem);
-@value space-m: clamp(1.50rem, calc(1.28rem + 1.27vw), 3.00rem);
-@value space-l: clamp(2.00rem, calc(1.71rem + 1.69vw), 4.00rem);
-@value space-xl: clamp(3.00rem, calc(2.57rem + 2.54vw), 6.00rem);
-@value space-2xl: clamp(4.00rem, calc(3.42rem + 3.39vw), 8.00rem);
-@value space-3xl: clamp(6.00rem, calc(5.14rem + 5.08vw), 12.00rem);
-/* One-up pairs */
-@value space-3xs-2xs: clamp(0.25rem, calc(0.14rem + 0.64vw), 1.00rem);
-@value space-2xs-xs: clamp(0.50rem, calc(0.36rem + 0.85vw), 1.50rem);
-@value space-xs-s: clamp(0.75rem, calc(0.57rem + 1.06vw), 2.00rem);
-@value space-s-m: clamp(1.00rem, calc(0.71rem + 1.69vw), 3.00rem);
-@value space-m-l: clamp(1.50rem, calc(1.14rem + 2.12vw), 4.00rem);
-@value space-l-xl: clamp(2.00rem, calc(1.42rem + 3.39vw), 6.00rem);
-@value space-xl-2xl: clamp(3.00rem, calc(2.28rem + 4.24vw), 8.00rem);
-@value space-2xl-3xl: clamp(4.00rem, calc(2.85rem + 6.78vw), 12.00rem);
+/* Color Theme Swatches in HSLA */
+.My-Color-Theme-1-hsla { color: hsla(315, 37, 48, 1); }
+.My-Color-Theme-2-hsla { color: hsla(46, 100, 91, 1); }
+.My-Color-Theme-3-hsla { color: hsla(95, 21, 58, 1); }
+.My-Color-Theme-4-hsla { color: hsla(32, 100, 50, 1); }
+.My-Color-Theme-5-hsla { color: hsla(231, 25, 21, 1); }
