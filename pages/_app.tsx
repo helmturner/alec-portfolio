@@ -1,21 +1,14 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
-import AppLayout from '../components/Layouts/AppLayout'
-import { ReactElement, ReactNode } from 'react'
-import { NextPage } from 'next'
+import "../styles/globals.css";
+import "../styles/vars.css";
+import type { AppProps } from "next/app";
+import AppLayout from "../components/Layouts/AppLayout";
 
-export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
-  getLayout?: (page: ReactElement) => ReactNode
+function MyApp({ Component, pageProps }: AppProps) {
+ return (
+      <AppLayout>
+        <Component {...pageProps} />
+      </AppLayout>
+    )
 }
 
-type AppPropsWithLayout<P={}> = AppProps<P> & {
-  Component: NextPageWithLayout<P>
-}
-
-
-function MyApp({ Component, pageProps }: AppPropsWithLayout) {
-  const getLayout = Component.getLayout || (page => <AppLayout>{page}</AppLayout>)
-  return getLayout(<Component {...pageProps} />)
-}
-
-export default MyApp
+export default MyApp;
