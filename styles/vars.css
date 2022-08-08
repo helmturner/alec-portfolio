@@ -1,6 +1,23 @@
-/* Color Theme Swatches in HSLA */
-.My-Color-Theme-1-hsla { color: hsla(315, 37, 48, 1); }
-.My-Color-Theme-2-hsla { color: hsla(46, 100, 91, 1); }
-.My-Color-Theme-3-hsla { color: hsla(95, 21, 58, 1); }
-.My-Color-Theme-4-hsla { color: hsla(32, 100, 50, 1); }
-.My-Color-Theme-5-hsla { color: hsla(231, 25, 21, 1); }
+:root {
+    /* Theme colors and hsl values */
+    --theme-purple: hsla(315, 37%, 48%, 1);
+    --theme-white: hsla(46, 100%, 91%, 1);
+    --theme-green: hsla(95, 21%, 58%, 1);
+    --theme-orange: hsla(32, 100%, 50%, 1);
+    --theme-black: hsla(231, 25%, 21%, 1);
+    --theme-purple-h: 315;
+    --theme-purple-s: 37%;
+    --theme-purple-l: 48%;
+    --theme-white-h: 46;
+    --theme-white-s: 100%;
+    --theme-white-l: 91%;
+    --theme-green-h: 95;
+    --theme-green-s: 21%;
+    --theme-green-l: 58%;
+    --theme-orange-h: 32;
+    --theme-orange-s: 100%;
+    --theme-orange-l: 50%;
+    --theme-black-h: 231;
+    --theme-black-s: 25%;
+    --theme-black-l: 21%;   
+}
