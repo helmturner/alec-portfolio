@@ -1,14 +1,27 @@
-import "../styles/globals.css";
-import "../styles/vars.css";
 import type { AppProps } from "next/app";
-import AppLayout from "../components/Layouts/AppLayout";
+import AppLayout from "../components/withMantine/AppLayout";
+import { MantineProvider, MantineThemeOverride } from "@mantine/core";
+
+const theme: MantineThemeOverride = {
+  colors: {
+    
+  }
+}
 
 function MyApp({ Component, pageProps }: AppProps) {
- return (
+  return (
+    <MantineProvider
+      withGlobalStyles
+      withNormalizeCSS
+      theme={{
+        /** Put your mantine theme override here */
+      }}
+    >
       <AppLayout>
         <Component {...pageProps} />
       </AppLayout>
-    )
+    </MantineProvider>
+  );
 }
 
 export default MyApp;
