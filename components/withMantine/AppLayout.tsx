@@ -12,7 +12,7 @@ import {
 import { useClickOutside } from "@mantine/hooks";
 import { useState } from "react";
 import Image from "next/future/image";
-import glasses from "../public/images/glasses.svg";
+import glasses from "../../public/images/glasses.svg";
 import {
   bioParagraphs,
   firstName,
@@ -21,8 +21,8 @@ import {
   linkedInUrl,
 } from "../../constants";
 import Link from "next/link";
-import linkedin from "../public/images/LinkedIn-Logos/LI-In-Bug.png";
-import octocat from "../public/images/GitHub-Mark/GitHub-Mark-32px.png";
+//import linkedin from "images/LinkedIn-Logos/LI-In-Bug.png";
+//import octocat from "images/GitHub-Mark/GitHub-Mark-32px.png";
 
 const AppLayout = ({ children }: AppShellProps) => {
   const [navOpen, setNavOpen] = useState(false);
@@ -126,13 +126,13 @@ const AppLayout = ({ children }: AppShellProps) => {
           <NavLink
             component="a"
             href={gitHubUrl}
-            icon={<Image alt="GitHub" src={octocat} height={32} width={32} />}
+            icon={<Image alt="GitHub" src={"/images/GitHub-Mark/GitHub-Mark-32px.png"} height={32} width={32} />}
           />
           <NavLink
             component="a"
             href={linkedInUrl}
             icon={
-              <Image alt="LinkedIn" src={linkedin} height={32} width={32} />
+              <Image alt="LinkedIn" src={"/images/LinkedIn-Logos/LI-In-Bug.png"} height={32} width={32} />
             }
           />
         </div>
