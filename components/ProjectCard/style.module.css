@@ -1,14 +1,11 @@
-@value colors: "../../styles/vars.css";
-@value purple1, purple2, purple3, green1, green2 from colors;
-
 .container {
-  color: purple1;
+  color: var(--theme-purple);
   display: flex;
   padding: 5px;
   flex-direction: column;
   align-items: center;
-  background-color: purple3;
-  border: 3px solid purple2;
+  background-color: var(--theme-white);
+  border: 3px solid var(--theme-black);
   border-radius: 30px;
   cursor: default;
 }
@@ -20,8 +17,8 @@
     width: 75%;
     height: 5px;
     margin-block: 5px;
-    border-color: purple1;
-    background-color: purple2;
+    border-color: var(--theme-green);
+    background-color: var(--theme-orange);
     border-radius: 10px;
 }
 
@@ -36,27 +33,27 @@
 }
 
 .container h2 {
-    color: purple1;
+    color: var(--theme-purple);
     font-weight: 800;
     font-size: max(2.3vw, 2.3vh);
     padding-inline: 10%;
     margin-inline: 5%;
     margin-block: 5px;
-    border: 5px solid purple1;
-    background-color: purple2;
+    border: 5px solid var(--theme-green);
+    background-color: var(--theme-orange);
     border-radius: 5px;
-    text-shadow: 1px 1px 1px purple3, -1px -1px 1px purple3;
+    text-shadow: 1px 1px 1px var(--theme-black), -1px -1px 1px var(--theme-black);
 }
 
 .container h3 {
-    color: green2;
+    color: var(--theme-green);
     font-weight: 800;
     font-size: max(2vw, 2vh);
     padding-inline: 10%;
     margin-inline: 5%;
     margin-block: 5px;
-    border: 5px solid purple1;
-    background-color: purple1;
+    border: 5px solid var(--theme-purple);
+    background-color: var(--theme-white);
     border-radius: 5px;
 }
 
@@ -67,10 +64,10 @@
 }
 
 .contactInfo > h4 {
-    color: green1;
+    color: var(--theme-green);
     font-size: max(2vw, 2vh);
     font-weight: 300;
-    text-shadow: 1px 1px 1px black, -1px -1px 1px black;
+    text-shadow: 1px 1px 1px var(--theme-black), -1px -1px 1px var(--theme-black);
     margin: 5px;
     padding: 0;
 }
@@ -78,8 +75,8 @@
 .list hr {
     width: 50%;
     height: 5px;
-    border-color: purple3;
-    background-color: purple3;
+    border-color: var(--theme-orange);
+    background-color: var(--theme-purple);
     border-radius: 10px;
 }
 
@@ -95,10 +92,10 @@
     padding: 10px;
     margin-block: 2px;
     border-radius: 20px;
-    background-color: purple2;
-    border: 5px solid purple1;
+    background-color: var(--theme-purple);
+    border: 5px solid var(--theme-orange);
     color: silver   ;
-    text-shadow: 1px 1px 1px purple3, -1px -1px 1px purple3;
+    text-shadow: 1px 1px 1px var(--theme-black), -1px -1px 1px var(--theme-black);
 }
 
 .list h4 {

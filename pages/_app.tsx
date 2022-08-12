@@ -1,5 +1,5 @@
 import type { AppProps } from "next/app";
-import AppLayout from "../components/withMantine/AppLayout";
+import Layout from "../components/withMantine/Layout";
 import { MantineProvider, MantineThemeOverride } from "@mantine/core";
 
 const theme: MantineThemeOverride = {
@@ -17,9 +17,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         /** Put your mantine theme override here */
       }}
     >
-      <AppLayout>
+      <Layout>
         <Component {...pageProps} />
-      </AppLayout>
+      </Layout>
     </MantineProvider>
   );
 }

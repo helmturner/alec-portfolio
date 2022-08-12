@@ -1,34 +1,3 @@
-@media (prefers-color-scheme: dark) {
-  .dark {
-    filter: invert(100%);
-  }
-  .bizcard a {
-    color: hsl(272, 52%, 85%);
-  }
-  .bizcard {
-    background: linear-gradient(
-          to right,
-          hsl(272, 52%, 30%),
-          hsl(0, 0%, 0%),
-          hsl(0, 0%, 0%),
-          hsl(272, 52%, 30%)
-        )
-        content-box,
-      linear-gradient(
-          to right,
-          hsl(272, 52%, 60%),
-          hsl(0, 0%, 30%),
-          hsl(0, 0%, 30%),
-          hsl(272, 52%, 60%)
-        )
-        border-box;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  .light {
-    filter: invert(100%);
-  }
   .bizcard a {
     color: hsl(272, 52%, 30%);
   }
@@ -51,7 +20,6 @@
         )
         border-box;
   }
-}
 
 .bizcard {
   padding: 0.3em;
@@ -68,30 +36,27 @@
 }
 
 .bizcard > address {
-  display: contents;
   text-align: center;
+  padding-block: 0;
+  margin-block: 0;
 }
 
 .bizcard h2,
 .bizcard h3 {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 0.1em;
-  padding-block: 0.1em;
+  padding-block: 0em;
+  margin-block: 0em;
   padding-inline: 0.2em;
+}
+
+.bizcard h3 {
+  font-size: 12pt
 }
 
 .bizcard a {
   margin-inline: 0.5em;
-  margin-block: 0.4em;
-}
-
-.bizcard h2 {
-  margin-top: 0.1em;
-  margin-bottom: 0;
-}
-
-.bizcard h3 {
-  margin-block: 0;
+  margin-block: 0em;
 }
 
 .bizcard ul {
@@ -104,6 +69,8 @@
 }
 
 .bizcard li {
+  margin-block: 0;
+  padding-block: 0;
   margin-inline: 0.5rem;
   font-weight: 400;
 }
